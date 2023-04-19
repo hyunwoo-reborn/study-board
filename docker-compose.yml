@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  mysql_study_board:
+    container_name: study_board_local
+    image: mysql:8.0.30
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=study_board
+      - MYSQL_USER=board_local_user
+      - MYSQL_PASSWORD=boardlocal123
+      - MYSQL_ROOT_PASSWORD=boardlocal123
+      - TZ=Asia/Seoul
