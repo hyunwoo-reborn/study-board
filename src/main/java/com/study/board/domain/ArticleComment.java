@@ -31,7 +31,7 @@ public class ArticleComment extends AuditingFields {
 
     @Setter
     @Column(nullable = false, length = 500)
-    private String content; // 내용
+    private String content; // 본문
 
 
     protected ArticleComment() {}
@@ -57,4 +57,5 @@ public class ArticleComment extends AuditingFields {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
