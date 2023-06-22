@@ -26,7 +26,7 @@ public class Article extends AuditingFields {
 
     @Setter
     @ManyToOne(optional = false)
-    private UserAccount userAccount; // 유저 정보 (ID)
+    private UserAccount userAccount; // 유저정보 (ID)
 
     @Setter
     @Column(nullable = false)
