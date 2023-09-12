@@ -223,6 +223,7 @@ class ArticleServiceTest {
         then(articleRepository).should().findAllDistinctHashtags();
     }
 
+
     private UserAccount createUserAccount() {
         return UserAccount.of(
                 "uno",
@@ -260,7 +261,6 @@ class ArticleServiceTest {
 
     private UserAccountDto createUserAccountDto() {
         return UserAccountDto.of(
-                1L,
                 "uno",
                 "password",
                 "uno@mail.com",
